@@ -172,8 +172,10 @@ class _RegisterPageState extends State<RegisterPage> {
                 await HelperFunction.saveUserLoggedInStatus(true);
                 await HelperFunction.saveUserNameSF(fullName);
                 await HelperFunction.saveUserEmailSF(email);
+                // ignore: use_build_context_synchronously
                 nextScreenReplace(context, HomePage());
               } else{
+                // ignore: use_build_context_synchronously
                 showSnackBar(context, Colors.red, value);
                 setState(() {
                   _isLoading = false;
