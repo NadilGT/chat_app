@@ -10,6 +10,7 @@ class AuthService {
     try{
       User user = (await firebaseAuth.signInWithEmailAndPassword(email: email, password: password)).user!;
 
+      // ignore: unnecessary_null_comparison
       if(user != null){
         return true;
       }
